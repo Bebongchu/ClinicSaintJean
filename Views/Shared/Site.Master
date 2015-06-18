@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    
+     <link type="text/css" rel="stylesheet" href="../../Styles/Tooltip/tooltip.css" />
+    <script type="text/javascript" src="../../Scripts/Tooltip/tooltip.js"></script>
+    
+    <link href="../../Styles/Shared/StyleSheet1.css" rel="stylesheet" type="text/css" />
+
+     <script type="text/javascript"  src="../../Scripts/Menubar/jquery.js"></script>
+     <script type="text/javascript"  src="../../Scripts/Menubar/docs.js"></script>
+   
+
+    <link type="text/css" rel="stylesheet" href="../../Styles/Menubar/superfish.css" />  
+    <link type="text/css" rel="stylesheet" href="../../Styles/Menubar/docs.css" /> 
+   
+     <link href="../../jquery.toolbar.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .auto-style2 {
+            width: 1109px;
+            text-align: right;
+        }
+        .auto-style6 {
+            width: 745px;
+            height: 76px;
+        }
+        .auto-style7 {
+            width: 5552px;
+            height: 76px;
+        }
+        .auto-style9 {
+            height: 76px;
+        }
+       
+       
+       
+        </style>
+
+  <script>
+
+      jQuery(document).ready(function () {
+          jQuery('ul.sf-menu').superfish();
+      });
+
+</script>
+     
+
+    
+</head>
+<body>
+    <div>
+    <table class="master-table" >
+        <tr>
+            <td style="background-color: #C0C0C0">
+                <img alt="" class="img-icon" src="../../Pictures/Logo.png" /></td>
+            <td class="auto-style7" style="background-color: #C0C0C0">
+               
+               <ul class="sf-menu sf-arrows" id="sample-menu-1" style="-ms-touch-action: pan-y; touch-action: pan-y;">
+							<li class="current">
+								<a class="sf-with-ul" href="#a">menu item</a>
+								<ul style="display: none;">
+									<li>
+										<a href="#aa">menu item</a>
+									</li>
+									<li class="current">
+										<a class="sf-with-ul" href="#ab">menu item</a>
+										<ul style="display: none;">
+											<li class="current"><a href="#">menu item</a></li>
+											<li><a href="#aba">menu item</a></li>
+											<li><a href="#abb">menu item</a></li>
+											<li><a href="#abc">menu item</a></li>
+											<li><a href="#abd">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+							</li>
+							<li>
+								<a class="sf-with-ul" href="#">menu item</a>
+								<ul style="display: none;">
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="sf-with-ul" href="#">menu item</a>
+										<ul style="display: none;">
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+											<li><a href="#">menu item</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">menu item</a>
+							</li> 
+						</ul>
+            </td>
+            <td class="auto-style6" style="background-color: #C0C0C0">
+                <a onmouseover="tooltip.pop(this, '#sub1', {offsetY:-10, smartPosition:false})" href="#" class="auto-style2">English</a></td>
+            <td class="auto-style9" style="background-color: #C0C0C0" >
+                <div id="Languages" >
+                    <img alt="" src="" id="profilePic" class="profile-img" /><div id="Name">
+                    </div>
+                    </div>
+                </td>
+      
+
+         </tr>
+    </table>
+       
+
+        <div class="tool-items" id="Menu" ><a class="tool-item" href="#"><i class="fa fa-plane"></i></a><a class="tool-item" href="#"><i class="fa fa-car"></i></a><a class="tool-item" href="#"><i class="fa fa-bicycle"></i></a></div>
+           <div style="display: none;">           
+    <div class="mcTooltipInner" style="left: 20px; top: 20px; width: 277px; height: 101px; position: absolute; opacity: 1;">
+        <div id="sub1">
+            <div class="column">            
+                <a href="#">French</a><br>
+                        
+            </div>
+          
+        </div></div>
+        </div>
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <p>
+        &nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿body {
+}
+.header {
+    background-color: #CCCCCC;
+    text-align: left;
+}
+.MainBar {
+    background-color: #CCCCCC;
+  
+    height: 104px;
+    width: 1286px;
+}
+.img-icon {
+    width: 46px;
+    height: 40px;
+}
+
+ .master-table {
+            border-spacing: 0px;
+            padding: 0px;
+            width: 100%;
+
+        }
+
+  .profile-img {
+            width: 65px;
+            height: 55px;
+            top: 0;
+
+        }

@@ -2,17 +2,26 @@
 
 #sliderFrame, #sliderFrame div {
     box-sizing: content-box;
+    top: 8px;
+    left: -9px;
+    height: 600px;
+    width: 900px;
 }
 #sliderFrame 
 {
-    position:relative;
-    width:700px;
-    margin:0 auto; /*center-aligned*/
+    
+    width:inherit;
+    margin:0 ;
+    top: 41px;
+    left: 22px;
+    height: 600px;
+    align-content:center;
+    
 }
 
 #slider, #slider div.sliderInner {
     width:900px;height:600px;/* Must be the same size as the slider images */
-    top:-60px;left:-40px;
+    top:23px;left:-7px;
 }
 
 #slider {

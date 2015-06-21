@@ -25,18 +25,20 @@
             height: 22px;
         }
         .auto-style1 {
-            background-color: #CCCCCC;
+           
             text-align: left;
-            width: 304px;
+            width: 20%;
         }
         .auto-style2 {
-            background-color: #CCCCCC;
-            text-align: left;
-            width: 837px;
+           
+            text-align: center;
+            width: 60%;
         }
         .auto-style3 {
-            text-align: right;
+            text-align: center;
+            width: 20%;
         }
+       
         </style>
     <link href="../../Styles/ImageSlider/js-image-slider.css" rel="stylesheet" type="text/css" />
     <script src="../../Scripts/ImageSlider/js-image-slider.js" type="text/javascript"></script>
@@ -46,11 +48,12 @@
     <link href="../../Styles/Shared/StyleSheet1.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body style="height: 55px">
+<body >
+  
     <form action="Home/Main" method="get">
     <table class="master-table">
         <tr>
-            <td class="auto-style1">
+            <td class="menu-logo">
                 <img alt="" class="img-icon" src="../../Pictures/Logo.png" /></td>
             <td class="auto-style2">
                 <input id="Username" type="text" value="Username" /><span class="header"> </span>
@@ -65,8 +68,9 @@
          </tr>
     </table>
       </form>
-    <div style="display: none;">
-
+  
+        <div style="display: none;">
+   
               
     <div class="mcTooltipInner" style="left: 20px; top: 20px; width: 277px; height: 101px; position: absolute; opacity: 1;">
         <div id="sub1">
@@ -77,12 +81,8 @@
           
         </div></div>
         </div>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-   
-         <div id="sliderFrame">
+  
+    <div id="sliderFrame">
         <div id="slider">
          
             <img alt=""  src="../../Pictures/HomePicture2.jpg" />
@@ -90,6 +90,7 @@
            <img alt=""  src="../../Pictures/HomePicture1.jpg" />
         </div>
     </div>
+        
    
         
 </body>

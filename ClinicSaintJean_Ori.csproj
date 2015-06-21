@@ -203,6 +203,8 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Styles\MenuBar\docs.css" />
+    <Content Include="Styles\MenuBar\superfish.css" />
     <Content Include="Styles\Shared\StyleSheet1.css" />
     <Content Include="Views\Home\Main.aspx" />
     <Content Include="Views\Home\Index.aspx" />
@@ -226,7 +228,6 @@
     <Folder Include="Scripts\Menubar\" />
     <Folder Include="Scripts\Tooltip\" />
     <Folder Include="Styles\ImageSlider\" />
-    <Folder Include="Styles\MenuBar\" />
     <Folder Include="Styles\Tooltip\" />
   </ItemGroup>
   <ItemGroup>

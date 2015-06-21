@@ -30,21 +30,8 @@
      <link href="../../jquery.toolbar.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
-        .auto-style2 {
-            width: 1109px;
-            text-align: right;
-        }
-        .auto-style6 {
-            width: 745px;
-            height: 76px;
-        }
-        .auto-style7 {
-            width: 5552px;
-            height: 76px;
-        }
-        .auto-style9 {
-            height: 76px;
-        }
+      
+       
        
        
        
@@ -65,11 +52,12 @@
     <div>
     <table class="master-table" >
         <tr>
-            <td style="background-color: #C0C0C0">
+            <td class="menu-logo">
                 <img alt="" class="img-icon" src="../../Pictures/Logo.png" /></td>
-            <td class="auto-style7" style="background-color: #C0C0C0">
+            
+            <td class="menu-items" >
                
-               <ul class="sf-menu sf-arrows" id="sample-menu-1" style="-ms-touch-action: pan-y; touch-action: pan-y;">
+               <ul class="sf-menu sf-arrows" id="sample-menu-1" style="-ms-touch-action: pan-y; touch-action: pan-y; text-align: center;">
 							<li class="current">
 								<a class="sf-with-ul" href="#a">menu item</a>
 								<ul style="display: none;">
@@ -171,10 +159,11 @@
 							</li> 
 						</ul>
             </td>
-            <td class="auto-style6" style="background-color: #C0C0C0">
+           
+            <td class="menu-language" >
                 <a onmouseover="tooltip.pop(this, '#sub1', {offsetY:-10, smartPosition:false})" href="#" class="auto-style2">English</a></td>
-            <td class="auto-style9" style="background-color: #C0C0C0" >
-                <div id="Languages" >
+            <td class="menu-profilpic" >
+                <div id="ProfileImg" >
                     <img alt="" src="" id="profilePic" class="profile-img" /><div id="Name">
                     </div>
                     </div>

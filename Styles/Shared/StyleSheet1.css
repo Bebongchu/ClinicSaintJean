@@ -1,30 +1,70 @@
-﻿body {
+﻿body {    
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
 }
+
 .header {
-    background-color: #CCCCCC;
-    text-align: left;
-}
+
+    width: 20%;
+    text-align: right;
+}   
+
 .MainBar {
-    background-color: #CCCCCC;
-  
+    background-color: #E9E9E9;
     height: 104px;
     width: 1286px;
 }
+
 .img-icon {
     width: 46px;
     height: 40px;
 }
 
- .master-table {
-            border-spacing: 0px;
-            padding: 0px;
-            width: 100%;
+.master-table {
+    margin: 0px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    padding: 0px;
+    margin-bottom:15px;
+    height: 60px;
+    background-color: #E9E9E9;
+    width:100%;
+    }
 
-        }
+    .master-table td {
+        background-color: inherit;       
+        vertical-align: top;
+    }
 
-  .profile-img {
-            width: 65px;
-            height: 55px;
-            top: 0;
+.profile-img {
+    width: 65px;
+    height: 55px;
+    top: 0;
+}
 
-        }
+.menu-items {
+    width: inherit;
+   
+     text-align:center;
+    height: inherit;
+}
+
+.menu-logo {
+    text-align: left;
+    width: 20%;
+    height: inherit;
+}
+
+.menu-language {
+    text-align: left;
+     width: 65px;
+     height: inherit;    
+}
+
+.menu-profilpic {
+    width: 65px;
+    height: 55px;
+
+}

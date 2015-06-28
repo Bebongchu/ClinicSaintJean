@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +189,11 @@
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Pictures\Logo.png" />
     <Content Include="Pictures\logo2.jpg" />
+    <Content Include="Scripts\BootStrap\bootstrap.js" />
+    <Content Include="Scripts\BootStrap\bootstrap.min.js" />
+    <Content Include="Scripts\DatePicker\bootstrap_datepicker.js" />
+    <Content Include="Scripts\BootStrap\npm.js" />
+    <Content Include="Scripts\DatePicker\prettify.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -201,13 +207,26 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\Menubar\docs.js" />
+    <Content Include="Scripts\Menubar\hoverIntent.js" />
+    <Content Include="Scripts\Menubar\jquery.js" />
+    <Content Include="Scripts\Menubar\superfish.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Styles\BootStrap\bootstrap-theme.css" />
+    <Content Include="Styles\BootStrap\bootstrap-theme.min.css" />
+    <Content Include="Styles\BootStrap\bootstrap.css" />
+    <Content Include="Styles\BootStrap\bootstrap.min.css" />
+    <Content Include="Styles\DatePicker\bootstrap.css" />
+    <Content Include="Styles\DatePicker\bootstrap_datepicker.css" />
+    <Content Include="Styles\ImageSlider\js-image-slider.css" />
     <Content Include="Styles\MenuBar\docs.css" />
     <Content Include="Styles\MenuBar\superfish.css" />
     <Content Include="Styles\Shared\StyleSheet1.css" />
+    <Content Include="Styles\Tooltip\tooltip.css" />
     <Content Include="Views\Home\Main.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Staff\AddStaff.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -223,12 +242,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Fonts\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\ImageSlider\" />
-    <Folder Include="Scripts\Menubar\" />
     <Folder Include="Scripts\Tooltip\" />
-    <Folder Include="Styles\ImageSlider\" />
-    <Folder Include="Styles\Tooltip\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

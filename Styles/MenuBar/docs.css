@@ -321,6 +321,7 @@ pre[class*=language-] {
 body, div {
     font-family: 'lucida grande',helvetica,verdana,arial,sans-serif;
     line-height: 1.4;
+    height: 16px;
 }
 
 body {

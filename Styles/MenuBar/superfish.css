@@ -15,7 +15,8 @@
 	z-index: 99;
 }
 .sf-menu > li {
-	float: left;
+  
+    float: left;
 }
 .sf-menu li:hover > ul,
 .sf-menu li.sfHover > ul {
@@ -46,7 +47,6 @@
 }
 .sf-menu a {
 	border-left: 1px solid #fff;
-
 	padding: .75em 1em;
 	text-decoration: none;
 	zoom: 1; /* IE7 */
@@ -110,3 +110,4 @@
 .sf-arrows ul .sfHover > .sf-with-ul:after {
 	border-left-color: white;
 }
+

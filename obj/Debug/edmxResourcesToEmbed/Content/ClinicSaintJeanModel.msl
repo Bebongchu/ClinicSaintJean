@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClinicSaintJeanModelStoreContainer" CdmEntityContainer="ClinicSaintJeanEntities">
+    <EntitySetMapping Name="AccessLevels">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.AccessLevel">
+        <MappingFragment StoreEntitySet="AccessLevels">
+          <ScalarProperty Name="AccessLevelID" ColumnName="AccessLevelID" />
+          <ScalarProperty Name="AccessLevelDesc" ColumnName="AccessLevelDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityTypes">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.ActivityType">
+        <MappingFragment StoreEntitySet="ActivityTypes">
+          <ScalarProperty Name="ActivityTypeID" ColumnName="ActivityTypeID" />
+          <ScalarProperty Name="ActivityTypeDesc" ColumnName="ActivityTypeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compagnies">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Compagny">
+        <MappingFragment StoreEntitySet="Compagnies">
+          <ScalarProperty Name="CompagnyID" ColumnName="CompagnyID" />
+          <ScalarProperty Name="RegistrationNbr" ColumnName="RegistrationNbr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drugs">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Drug">
+        <MappingFragment StoreEntitySet="Drugs">
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="DrugName" ColumnName="DrugName" />
+          <ScalarProperty Name="DrugDescription" ColumnName="DrugDescription" />
+          <ScalarProperty Name="DrugQuantity" ColumnName="DrugQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrugsPriceHistoties">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.DrugsPriceHistoty">
+        <MappingFragment StoreEntitySet="DrugsPriceHistoty">
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="DrugPriceAdjDate" ColumnName="DrugPriceAdjDate" />
+          <ScalarProperty Name="DrugPrice" ColumnName="DrugPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeCategories">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.EmployeeCategory">
+        <MappingFragment StoreEntitySet="EmployeeCategories">
+          <ScalarProperty Name="EmployeeCategoryID" ColumnName="EmployeeCategoryID" />
+          <ScalarProperty Name="EmployeeCategoryDesc" ColumnName="EmployeeCategoryDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeCategoryID" ColumnName="EmployeeCategoryID" />
+          <ScalarProperty Name="EmpAccessLevelID" ColumnName="EmpAccessLevelID" />
+          <ScalarProperty Name="EmpStartDate" ColumnName="EmpStartDate" />
+          <ScalarProperty Name="EmpEndDate" ColumnName="EmpEndDate" />
+          <ScalarProperty Name="EmpPayDay" ColumnName="EmpPayDay" />
+          <ScalarProperty Name="EmpAccountBalance" ColumnName="EmpAccountBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpSalaries">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.EmpSalary">
+        <MappingFragment StoreEntitySet="EmpSalaries">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmpLastSalaryAdjust" ColumnName="EmpLastSalaryAdjust" />
+          <ScalarProperty Name="EmpSalary1" ColumnName="EmpSalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Entity">
+        <MappingFragment StoreEntitySet="Entities">
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="TelNumber" ColumnName="TelNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="SwiftCode" ColumnName="SwiftCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndentifcationTypes">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.IndentifcationType">
+        <MappingFragment StoreEntitySet="IndentifcationType">
+          <ScalarProperty Name="IDType" ColumnName="IDType" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeDesc" ColumnName="TypeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LabTests">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.LabTest">
+        <MappingFragment StoreEntitySet="LabTests">
+          <ScalarProperty Name="LabTestID" ColumnName="LabTestID" />
+          <ScalarProperty Name="LabTestDesc" ColumnName="LabTestDesc" />
+          <ScalarProperty Name="LabTestFee" ColumnName="LabTestFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="labTestsMaterials">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.labTestsMaterial">
+        <MappingFragment StoreEntitySet="labTestsMaterials">
+          <ScalarProperty Name="LabTestID" ColumnName="LabTestID" />
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogOnHistories">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.LogOnHistory">
+        <MappingFragment StoreEntitySet="LogOnHistory">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LogOnDateTime" ColumnName="LogOnDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientReferers">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.PatientReferer">
+        <MappingFragment StoreEntitySet="PatientReferers">
+          <ScalarProperty Name="PatientRefererID" ColumnName="PatientRefererID" />
+          <ScalarProperty Name="ClinicName" ColumnName="ClinicName" />
+          <ScalarProperty Name="AccountBalance" ColumnName="AccountBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Patient">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Accountbalance" ColumnName="Accountbalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientsTests">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.PatientsTest">
+        <MappingFragment StoreEntitySet="PatientsTests">
+          <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+          <ScalarProperty Name="LabTestID" ColumnName="LabTestID" />
+          <ScalarProperty Name="TestPaid" ColumnName="TestPaid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentModes">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.PaymentMode">
+        <MappingFragment StoreEntitySet="PaymentMode">
+          <ScalarProperty Name="PaymentModeID" ColumnName="PaymentModeID" />
+          <ScalarProperty Name="PaymentModeDesc" ColumnName="PaymentModeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Payment">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="PaymentSourceID" ColumnName="PaymentSourceID" />
+          <ScalarProperty Name="PaymentDestID" ColumnName="PaymentDestID" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="PaymentModeID" ColumnName="PaymentModeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Person">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="IDType" ColumnName="IDType" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password1" ColumnName="Password1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescriptions">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Prescription">
+        <MappingFragment StoreEntitySet="Prescriptions">
+          <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roosters">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Rooster">
+        <MappingFragment StoreEntitySet="Rooster">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ActivityTypeID" ColumnName="ActivityTypeID" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceTreatmentDrugs">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.ServiceTreatmentDrug">
+        <MappingFragment StoreEntitySet="ServiceTreatmentDrugs">
+          <ScalarProperty Name="ServiceTreatmentTypeID" ColumnName="ServiceTreatmentTypeID" />
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceTreatmentFeeHists">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.ServiceTreatmentFeeHist">
+        <MappingFragment StoreEntitySet="ServiceTreatmentFeeHist">
+          <ScalarProperty Name="ServiceTreatmentID" ColumnName="ServiceTreatmentID" />
+          <ScalarProperty Name="ServiceFeeAdjDate" ColumnName="ServiceFeeAdjDate" />
+          <ScalarProperty Name="ServiceTreatmentFee" ColumnName="ServiceTreatmentFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceTreatments">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.ServiceTreatment">
+        <MappingFragment StoreEntitySet="ServiceTreatments">
+          <ScalarProperty Name="ServiceTreatmentID" ColumnName="ServiceTreatmentID" />
+          <ScalarProperty Name="ServiceTreatmentTypeID" ColumnName="ServiceTreatmentTypeID" />
+          <ScalarProperty Name="PatientRefererID" ColumnName="PatientRefererID" />
+          <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+          <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceTreatmentTypes">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.ServiceTreatmentType">
+        <MappingFragment StoreEntitySet="ServiceTreatmentTypes">
+          <ScalarProperty Name="ServiceTreatmentTypeID" ColumnName="ServiceTreatmentTypeID" />
+          <ScalarProperty Name="ServiceTreatmentDesc" ColumnName="ServiceTreatmentDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="DrugID" ColumnName="DrugID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StockDatetime" ColumnName="StockDatetime" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visits">
+      <EntityTypeMapping TypeName="ClinicSaintJeanModel.Visit">
+        <MappingFragment StoreEntitySet="Visits">
+          <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="VisitDateTime" ColumnName="VisitDateTime" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="PatientWeight" ColumnName="PatientWeight" />
+          <ScalarProperty Name="PatientTemp" ColumnName="PatientTemp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ServiceTreatmentStaff" TypeName="ClinicSaintJeanModel.ServiceTreatmentStaff" StoreEntitySet="ServiceTreatmentStaff">
+      <EndProperty Name="Employees">
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </EndProperty>
+      <EndProperty Name="ServiceTreatments">
+        <ScalarProperty Name="ServiceTreatmentID" ColumnName="ServiceTreatmentID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="ClStJeanCreateTables" FunctionName="ClinicSaintJeanModel.Store.ClStJeanCreateTables" />
+  </EntityContainerMapping>
+</Mapping>

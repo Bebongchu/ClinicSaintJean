@@ -13,6 +13,7 @@ namespace ClinicSaintJean_Ori.Controllers
 
         public ActionResult Index()
         {
+           
             return View();
         }
 
@@ -29,7 +30,8 @@ namespace ClinicSaintJean_Ori.Controllers
                 submenus.Add(null);
 
                 List<List<string>> Links = new List<List<string>>();
-                Links.Add(new List<string> { "/Staff/AddStaff", "" });
+                Links.Add(new List<string> { "/Staff/AddStaff", "/Staff/SearchStaff" }); // Links per menus
+               
 
                 Session["Menus"] = menus;
                 Session["SubMenus"] = submenus;

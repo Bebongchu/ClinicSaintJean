@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf26ad058d19404c9a7bd23127be4631" Name="Diagram1">
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.AccessLevel" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.ActivityType" Width="1.5" PointX="11.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Compagny" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Drug" Width="1.5" PointX="11.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.DrugsPriceHistoty" Width="1.5" PointX="13.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.EmployeeCategory" Width="1.5" PointX="6" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Employee" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.EmpSalary" Width="1.5" PointX="10.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Entity" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.IndentifcationType" Width="1.5" PointX="3.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.LabTest" Width="1.5" PointX="13.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.labTestsMaterial" Width="1.5" PointX="15.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.LogOnHistory" Width="1.5" PointX="8.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.PatientReferer" Width="1.5" PointX="8.25" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Patient" Width="1.5" PointX="11.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.PatientsTest" Width="1.5" PointX="15.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.PaymentMode" Width="1.5" PointX="9" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Payment" Width="1.5" PointX="11.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Person" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Prescription" Width="1.5" PointX="15.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Rooster" Width="1.5" PointX="13.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.ServiceTreatmentDrug" Width="1.5" PointX="18.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.ServiceTreatmentFeeHist" Width="1.5" PointX="18.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.ServiceTreatment" Width="1.5" PointX="18.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.ServiceTreatmentType" Width="1.5" PointX="16.5" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Stock" Width="1.5" PointX="13.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSaintJeanModel.Visit" Width="1.5" PointX="13.5" PointY="17.25" IsExpanded="true" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Employees__EmpAc__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Rooster__Activit__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Compagnie__Compa__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__DrugsPric__DrugI__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__labTestsM__DrugI__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Prescript__DrugI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__DrugI__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Stock__DrugID__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Employees__Emplo__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Employees__Emplo__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__EmpSalari__Emplo__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Rooster__Employe__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Stock__EmployeeI__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Visits__DoctorID__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Persons__PersonI__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Patients__Patien__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Persons__IDType__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__labTestsM__LabTe__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__PatientsT__LabTe__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__LogOnHist__Emplo__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__PatientRe__Patie__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__Patie__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Visits__PatientI__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__PatientsT__Visit__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Payments__Paymen__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Payments__Paymen__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Payments__Paymen__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__Prescript__Visit__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__Servi__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__Servi__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__Servi__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.FK__ServiceTr__Visit__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSaintJeanModel.ServiceTreatmentStaff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

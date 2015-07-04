@@ -1,19 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.EmployeeProfile>" %>
 
-<script runat="server">
-
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-</script>
-
-
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    AddStaff
-  
+    EditStaff
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -33,8 +21,8 @@
 
     </script>
 
-    <form action="#a" method="get">
-    <table class="NewStaff">
+    <form action="#a" method="post">
+    <table class="NewStaff" style="width:68%; margin-left: 129px;">
         <tr>
             <td style="height: 25px; width: 189px">Name</td>
             <td style="height: 25px"><%= Html.TextBoxFor(m => m.Name) %></td>
@@ -101,8 +89,8 @@
             <td style="width: 189px" class="modal-sm">Date of Birth</td>
                       
               <td>
-			  <div class="input-append date" id="dob" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="Text1" size="16" type="text" value="12-02-2012" readonly="">
+			  <div class="input-append date" id="dob" data-date="<%= Model.DOB.ToShortDateString() %>" data-date-format="dd-mm-yyyy">
+				<input class="span2" id="Text1" size="16" type="text" value="<%= ((Model.DOB.Day<10)?"0"+Model.DOB.Day.ToString():Model.DOB.Day.ToString()) +"-"+ ((Model.DOB.Day<10)?"0"+Model.DOB.Month.ToString():Model.DOB.Day.ToString()) +"-"+ Model.DOB.Year.ToString() %>" readonly="">
 				<span class="add-on"><i class="icon-calendar"></i></span>
 			  </div>
          
@@ -114,8 +102,8 @@
             <td style="width: 189px" class="modal-sm">Start Date</td>
                       
               <td>
-			  <div class="input-append date" id="startdate" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="StartDate" size="16" type="text" value="12-02-2012" readonly="">
+			  <div class="input-append date" id="startdate" data-date="<%= Model.StartDate.ToShortDateString() %>" data-date-format="dd-mm-yyyy">
+				<input class="span2" id="Text2" size="16" type="text" value="<%= ((Model.StartDate.Day<10)?"0"+Model.StartDate.Day.ToString():Model.StartDate.Day.ToString()) +"-"+ ((Model.StartDate.Day<10)?"0"+Model.StartDate.Month.ToString():Model.StartDate.Day.ToString()) +"-"+Model.StartDate.Year.ToString() %>" readonly="">
 				<span class="add-on"><i class="icon-calendar"></i></span>
 			  </div>
          
@@ -127,8 +115,8 @@
             <td style="width: 189px" class="modal-sm">Pay Day</td>
                       
               <td>
-			  <div class="input-append date" id="payday" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="PayDay" size="16" type="text" value="12-02-2012" readonly="">
+			  <div class="input-append date" id="payday" data-date="<%= Model.PayDay.ToShortDateString() %>" data-date-format="dd-mm-yyyy">
+				<input class="span2" id="Text3" size="16" type="text" value="<%= ((Model.PayDay.Day<10)?"0"+Model.PayDay.Day.ToString():Model.PayDay.Day.ToString()) +"-"+ ((Model.PayDay.Day<10)?"0"+Model.PayDay.Month.ToString():Model.PayDay.Day.ToString()) +"-"+Model.PayDay.Year.ToString() %>" readonly="">
 				<span class="add-on"><i class="icon-calendar"></i></span>
 			  </div>
          
@@ -137,7 +125,7 @@
         </tr>
 
         <tr> <td>
-            <input id="Create"  type="submit" value="Create"  />
+            <input id="Update"  type="submit" value="Update"  />
             </td></tr>
     </table>
 </form>

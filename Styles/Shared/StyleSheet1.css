@@ -39,7 +39,7 @@
     }
 
 .profile-img {
-    width: 65px;
+    width: 71px;
     height: 55px;
     top: 0;
 }
@@ -69,5 +69,41 @@
 
 }
 .NewStaff {
-    margin: 100px;
+    width:65%; 
+    margin-left: 400px;
+    margin-right: 82px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.div-default 
+{
+    margin-left: 123px;
+    width: 87px;
+}
+
+.radio { 
+    width:55%; 
+    margin-left: 123px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 21px;
+  list-style: none; 
+}
+
+    ul.radio li {
+          margin-left: 450px;
+    }
+
+.Paramfield {
+    
+    width: 400px;
+    margin-left: 400px;
+}
+
+.buttondefault {
+    align-self: center;
+    text-align: center;
+    margin-left: 170px;
+    margin-top: 27px;
 }

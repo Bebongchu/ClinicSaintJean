@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,11 +124,108 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Content\AccessLevel.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ActivityType.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ClinicSaintJeanModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicSaintJeanModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ClinicSaintJeanModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ClinicSaintJeanModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicSaintJeanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Compagny.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Drug.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\DrugsPriceHistoty.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Employee.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\EmployeeCategory.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\EmpSalary.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Entity.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\IndentifcationType.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\LabTest.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\labTestsMaterial.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\LogOnHistory.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Patient.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\PatientReferer.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\PatientsTest.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Payment.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\PaymentMode.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Person.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Prescription.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Rooster.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ServiceTreatment.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ServiceTreatmentDrug.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ServiceTreatmentFeeHist.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ServiceTreatmentType.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Stock.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Visit.cs">
+      <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\StaffModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +285,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <EntityDeploy Include="Content\ClinicSaintJeanModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClinicSaintJeanModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Content\ClinicSaintJeanModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicSaintJeanModel.edmx</DependentUpon>
+      <LastGenOutput>ClinicSaintJeanModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\ClinicSaintJeanModel.edmx.diagram">
+      <DependentUpon>ClinicSaintJeanModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\ClinicSaintJeanModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicSaintJeanModel.edmx</DependentUpon>
+      <LastGenOutput>ClinicSaintJeanModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Pictures\Logo.png" />
     <Content Include="Pictures\logo2.jpg" />
@@ -227,6 +343,8 @@
     <Content Include="Views\Home\Main.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Staff\AddStaff.aspx" />
+    <Content Include="Views\Staff\EditStaff.aspx" />
+    <Content Include="Views\Staff\SearchStaff.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -243,12 +361,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Fonts\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\ImageSlider\" />
     <Folder Include="Scripts\Tooltip\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

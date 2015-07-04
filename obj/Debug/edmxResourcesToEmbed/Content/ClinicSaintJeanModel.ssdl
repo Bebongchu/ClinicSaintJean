@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClinicSaintJeanModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ClinicSaintJeanModelStoreContainer">
+    <EntitySet Name="AccessLevels" EntityType="ClinicSaintJeanModel.Store.AccessLevels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActivityTypes" EntityType="ClinicSaintJeanModel.Store.ActivityTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Compagnies" EntityType="ClinicSaintJeanModel.Store.Compagnies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Drugs" EntityType="ClinicSaintJeanModel.Store.Drugs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DrugsPriceHistoty" EntityType="ClinicSaintJeanModel.Store.DrugsPriceHistoty" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeCategories" EntityType="ClinicSaintJeanModel.Store.EmployeeCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="ClinicSaintJeanModel.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpSalaries" EntityType="ClinicSaintJeanModel.Store.EmpSalaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Entities" EntityType="ClinicSaintJeanModel.Store.Entities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IndentifcationType" EntityType="ClinicSaintJeanModel.Store.IndentifcationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LabTests" EntityType="ClinicSaintJeanModel.Store.LabTests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="labTestsMaterials" EntityType="ClinicSaintJeanModel.Store.labTestsMaterials" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogOnHistory" EntityType="ClinicSaintJeanModel.Store.LogOnHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientReferers" EntityType="ClinicSaintJeanModel.Store.PatientReferers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="ClinicSaintJeanModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientsTests" EntityType="ClinicSaintJeanModel.Store.PatientsTests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PaymentMode" EntityType="ClinicSaintJeanModel.Store.PaymentMode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Payments" EntityType="ClinicSaintJeanModel.Store.Payments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Persons" EntityType="ClinicSaintJeanModel.Store.Persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Prescriptions" EntityType="ClinicSaintJeanModel.Store.Prescriptions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rooster" EntityType="ClinicSaintJeanModel.Store.Rooster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceTreatmentDrugs" EntityType="ClinicSaintJeanModel.Store.ServiceTreatmentDrugs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceTreatmentFeeHist" EntityType="ClinicSaintJeanModel.Store.ServiceTreatmentFeeHist" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceTreatments" EntityType="ClinicSaintJeanModel.Store.ServiceTreatments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceTreatmentStaff" EntityType="ClinicSaintJeanModel.Store.ServiceTreatmentStaff" store:Type="Tables" store:Schema="dbo" store:Name="ServiceTreatmentStaff">
+      <DefiningQuery>SELECT 
+      [ServiceTreatmentStaff].[ServiceTreatmentID] AS [ServiceTreatmentID], 
+      [ServiceTreatmentStaff].[EmployeeID] AS [EmployeeID]
+      FROM [dbo].[ServiceTreatmentStaff] AS [ServiceTreatmentStaff]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServiceTreatmentTypes" EntityType="ClinicSaintJeanModel.Store.ServiceTreatmentTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stock" EntityType="ClinicSaintJeanModel.Store.Stock" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Visits" EntityType="ClinicSaintJeanModel.Store.Visits" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Compagnie__Compa__173876EA" Association="ClinicSaintJeanModel.Store.FK__Compagnie__Compa__173876EA">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="Compagnies" EntitySet="Compagnies" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DrugsPric__DrugI__3E52440B" Association="ClinicSaintJeanModel.Store.FK__DrugsPric__DrugI__3E52440B">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="DrugsPriceHistoty" EntitySet="DrugsPriceHistoty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__EmpAc__2E1BDC42" Association="ClinicSaintJeanModel.Store.FK__Employees__EmpAc__2E1BDC42">
+      <End Role="AccessLevels" EntitySet="AccessLevels" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__Emplo__2C3393D0" Association="ClinicSaintJeanModel.Store.FK__Employees__Emplo__2C3393D0">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__Emplo__2D27B809" Association="ClinicSaintJeanModel.Store.FK__Employees__Emplo__2D27B809">
+      <End Role="EmployeeCategories" EntitySet="EmployeeCategories" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpSalari__Emplo__30F848ED" Association="ClinicSaintJeanModel.Store.FK__EmpSalari__Emplo__30F848ED">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmpSalaries" EntitySet="EmpSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__labTestsM__DrugI__4F7CD00D" Association="ClinicSaintJeanModel.Store.FK__labTestsM__DrugI__4F7CD00D">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="labTestsMaterials" EntitySet="labTestsMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__labTestsM__LabTe__4E88ABD4" Association="ClinicSaintJeanModel.Store.FK__labTestsM__LabTe__4E88ABD4">
+      <End Role="LabTests" EntitySet="LabTests" />
+      <End Role="labTestsMaterials" EntitySet="labTestsMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LogOnHist__Emplo__398D8EEE" Association="ClinicSaintJeanModel.Store.FK__LogOnHist__Emplo__398D8EEE">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="LogOnHistory" EntitySet="LogOnHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PatientRe__Patie__5EBF139D" Association="ClinicSaintJeanModel.Store.FK__PatientRe__Patie__5EBF139D">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="PatientReferers" EntitySet="PatientReferers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Patients__Patien__1DE57479" Association="ClinicSaintJeanModel.Store.FK__Patients__Patien__1DE57479">
+      <End Role="IndentifcationType" EntitySet="IndentifcationType" />
+      <End Role="Patients" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PatientsT__LabTe__534D60F1" Association="ClinicSaintJeanModel.Store.FK__PatientsT__LabTe__534D60F1">
+      <End Role="LabTests" EntitySet="LabTests" />
+      <End Role="PatientsTests" EntitySet="PatientsTests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PatientsT__Visit__52593CB8" Association="ClinicSaintJeanModel.Store.FK__PatientsT__Visit__52593CB8">
+      <End Role="Visits" EntitySet="Visits" />
+      <End Role="PatientsTests" EntitySet="PatientsTests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Paymen__239E4DCF" Association="ClinicSaintJeanModel.Store.FK__Payments__Paymen__239E4DCF">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Paymen__24927208" Association="ClinicSaintJeanModel.Store.FK__Payments__Paymen__24927208">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Paymen__25869641" Association="ClinicSaintJeanModel.Store.FK__Payments__Paymen__25869641">
+      <End Role="PaymentMode" EntitySet="PaymentMode" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persons__IDType__1B0907CE" Association="ClinicSaintJeanModel.Store.FK__Persons__IDType__1B0907CE">
+      <End Role="IndentifcationType" EntitySet="IndentifcationType" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persons__PersonI__1A14E395" Association="ClinicSaintJeanModel.Store.FK__Persons__PersonI__1A14E395">
+      <End Role="Entities" EntitySet="Entities" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prescript__DrugI__45F365D3" Association="ClinicSaintJeanModel.Store.FK__Prescript__DrugI__45F365D3">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="Prescriptions" EntitySet="Prescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prescript__Visit__44FF419A" Association="ClinicSaintJeanModel.Store.FK__Prescript__Visit__44FF419A">
+      <End Role="Visits" EntitySet="Visits" />
+      <End Role="Prescriptions" EntitySet="Prescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rooster__Activit__36B12243" Association="ClinicSaintJeanModel.Store.FK__Rooster__Activit__36B12243">
+      <End Role="ActivityTypes" EntitySet="ActivityTypes" />
+      <End Role="Rooster" EntitySet="Rooster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rooster__Employe__35BCFE0A" Association="ClinicSaintJeanModel.Store.FK__Rooster__Employe__35BCFE0A">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Rooster" EntitySet="Rooster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__DrugI__5BE2A6F2" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__DrugI__5BE2A6F2">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="ServiceTreatmentDrugs" EntitySet="ServiceTreatmentDrugs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Emplo__66603565" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Emplo__66603565">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ServiceTreatmentStaff" EntitySet="ServiceTreatmentStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Patie__628FA481" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Patie__628FA481">
+      <End Role="PatientReferers" EntitySet="PatientReferers" />
+      <End Role="ServiceTreatments" EntitySet="ServiceTreatments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Servi__5812160E" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Servi__5812160E">
+      <End Role="ServiceTreatmentTypes" EntitySet="ServiceTreatmentTypes" />
+      <End Role="ServiceTreatmentFeeHist" EntitySet="ServiceTreatmentFeeHist" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Servi__5AEE82B9" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Servi__5AEE82B9">
+      <End Role="ServiceTreatmentTypes" EntitySet="ServiceTreatmentTypes" />
+      <End Role="ServiceTreatmentDrugs" EntitySet="ServiceTreatmentDrugs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Servi__619B8048" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Servi__619B8048">
+      <End Role="ServiceTreatmentTypes" EntitySet="ServiceTreatmentTypes" />
+      <End Role="ServiceTreatments" EntitySet="ServiceTreatments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Servi__656C112C" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Servi__656C112C">
+      <End Role="ServiceTreatments" EntitySet="ServiceTreatments" />
+      <End Role="ServiceTreatmentStaff" EntitySet="ServiceTreatmentStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Visit__6383C8BA" Association="ClinicSaintJeanModel.Store.FK__ServiceTr__Visit__6383C8BA">
+      <End Role="Visits" EntitySet="Visits" />
+      <End Role="ServiceTreatments" EntitySet="ServiceTreatments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stock__DrugID__48CFD27E" Association="ClinicSaintJeanModel.Store.FK__Stock__DrugID__48CFD27E">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stock__EmployeeI__49C3F6B7" Association="ClinicSaintJeanModel.Store.FK__Stock__EmployeeI__49C3F6B7">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__DoctorID__4222D4EF" Association="ClinicSaintJeanModel.Store.FK__Visits__DoctorID__4222D4EF">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__PatientI__412EB0B6" Association="ClinicSaintJeanModel.Store.FK__Visits__PatientI__412EB0B6">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccessLevels">
+    <Key>
+      <PropertyRef Name="AccessLevelID" />
+    </Key>
+    <Property Name="AccessLevelID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccessLevelDesc" Type="text" />
+  </EntityType>
+  <EntityType Name="ActivityTypes">
+    <Key>
+      <PropertyRef Name="ActivityTypeID" />
+    </Key>
+    <Property Name="ActivityTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ActivityTypeDesc" Type="text" />
+  </EntityType>
+  <EntityType Name="Compagnies">
+    <Key>
+      <PropertyRef Name="CompagnyID" />
+    </Key>
+    <Property Name="CompagnyID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RegistrationNbr" Type="text" />
+  </EntityType>
+  <EntityType Name="Drugs">
+    <Key>
+      <PropertyRef Name="DrugID" />
+    </Key>
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugName" Type="varchar" MaxLength="50" />
+    <Property Name="DrugDescription" Type="text" />
+    <Property Name="DrugQuantity" Type="int" />
+  </EntityType>
+  <EntityType Name="DrugsPriceHistoty">
+    <Key>
+      <PropertyRef Name="DrugID" />
+      <PropertyRef Name="DrugPriceAdjDate" />
+    </Key>
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugPriceAdjDate" Type="datetime" Nullable="false" />
+    <Property Name="DrugPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="EmployeeCategories">
+    <Key>
+      <PropertyRef Name="EmployeeCategoryID" />
+    </Key>
+    <Property Name="EmployeeCategoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeCategoryDesc" Type="text" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeCategoryID" Type="uniqueidentifier" />
+    <Property Name="EmpAccessLevelID" Type="uniqueidentifier" />
+    <Property Name="EmpStartDate" Type="date" />
+    <Property Name="EmpEndDate" Type="date" />
+    <Property Name="EmpPayDay" Type="date" />
+    <Property Name="EmpAccountBalance" Type="money" />
+  </EntityType>
+  <EntityType Name="EmpSalaries">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="EmpLastSalaryAdjust" />
+    </Key>
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmpLastSalaryAdjust" Type="date" Nullable="false" />
+    <Property Name="EmpSalary" Type="money" />
+  </EntityType>
+  <EntityType Name="Entities">
+    <Key>
+      <PropertyRef Name="EntityID" />
+    </Key>
+    <Property Name="EntityID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="30" />
+    <Property Name="Address1" Type="text" />
+    <Property Name="TelNumber" Type="varchar" MaxLength="30" />
+    <Property Name="AccountNumber" Type="int" />
+    <Property Name="BankName" Type="varchar" MaxLength="25" />
+    <Property Name="BranchName" Type="varchar" MaxLength="25" />
+    <Property Name="BranchCode" Type="smallint" />
+    <Property Name="SwiftCode" Type="smallint" />
+  </EntityType>
+  <EntityType Name="IndentifcationType">
+    <Key>
+      <PropertyRef Name="IDType" />
+    </Key>
+    <Property Name="IDType" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeName" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="TypeDesc" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LabTests">
+    <Key>
+      <PropertyRef Name="LabTestID" />
+    </Key>
+    <Property Name="LabTestID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LabTestDesc" Type="text" />
+    <Property Name="LabTestFee" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="labTestsMaterials">
+    <Key>
+      <PropertyRef Name="LabTestID" />
+    </Key>
+    <Property Name="LabTestID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Quantity" Type="smallint" />
+  </EntityType>
+  <EntityType Name="LogOnHistory">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LogOnDateTime" Type="date" />
+  </EntityType>
+  <EntityType Name="PatientReferers">
+    <Key>
+      <PropertyRef Name="PatientRefererID" />
+    </Key>
+    <Property Name="PatientRefererID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClinicName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountBalance" Type="money" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Accountbalance" Type="money" />
+  </EntityType>
+  <EntityType Name="PatientsTests">
+    <Key>
+      <PropertyRef Name="VisitID" />
+      <PropertyRef Name="LabTestID" />
+    </Key>
+    <Property Name="VisitID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LabTestID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TestPaid" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PaymentMode">
+    <Key>
+      <PropertyRef Name="PaymentModeID" />
+    </Key>
+    <Property Name="PaymentModeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaymentModeDesc" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentSourceID" />
+      <PropertyRef Name="PaymentDestID" />
+      <PropertyRef Name="PaymentDate" />
+    </Key>
+    <Property Name="PaymentSourceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaymentDestID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaymentDate" Type="datetime" Nullable="false" />
+    <Property Name="PaymentModeID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="30" />
+    <Property Name="IDNumber" Type="varchar" MaxLength="30" />
+    <Property Name="IDType" Type="uniqueidentifier" />
+    <Property Name="DateofBirth" Type="date" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="20" />
+    <Property Name="Password1" Type="text" />
+  </EntityType>
+  <EntityType Name="Prescriptions">
+    <Key>
+      <PropertyRef Name="VisitID" />
+      <PropertyRef Name="DrugID" />
+    </Key>
+    <Property Name="VisitID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Rooster">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="StartDateTime" />
+    </Key>
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ActivityTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartDateTime" Type="date" Nullable="false" />
+    <Property Name="EndDateTime" Type="date" />
+  </EntityType>
+  <EntityType Name="ServiceTreatmentDrugs">
+    <Key>
+      <PropertyRef Name="ServiceTreatmentTypeID" />
+      <PropertyRef Name="DrugID" />
+    </Key>
+    <Property Name="ServiceTreatmentTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="ServiceTreatmentFeeHist">
+    <Key>
+      <PropertyRef Name="ServiceTreatmentID" />
+      <PropertyRef Name="ServiceFeeAdjDate" />
+    </Key>
+    <Property Name="ServiceTreatmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ServiceFeeAdjDate" Type="datetime" Nullable="false" />
+    <Property Name="ServiceTreatmentFee" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="ServiceTreatments">
+    <Key>
+      <PropertyRef Name="ServiceTreatmentID" />
+    </Key>
+    <Property Name="ServiceTreatmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ServiceTreatmentTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PatientRefererID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VisitID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ServiceDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClinicSaintJean.dbo.ServiceTreatmentStaff' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ServiceTreatmentStaff">
+    <Key>
+      <PropertyRef Name="ServiceTreatmentID" />
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="ServiceTreatmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceTreatmentTypes">
+    <Key>
+      <PropertyRef Name="ServiceTreatmentTypeID" />
+    </Key>
+    <Property Name="ServiceTreatmentTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ServiceTreatmentDesc" Type="text" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DrugID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StockDatetime" Type="datetime" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Visits">
+    <Key>
+      <PropertyRef Name="VisitID" />
+    </Key>
+    <Property Name="VisitID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PatientID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VisitDateTime" Type="datetime" />
+    <Property Name="DoctorID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PatientWeight" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="PatientTemp" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <Association Name="FK__Compagnie__Compa__173876EA">
+    <End Role="Entities" Type="ClinicSaintJeanModel.Store.Entities" Multiplicity="1" />
+    <End Role="Compagnies" Type="ClinicSaintJeanModel.Store.Compagnies" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="Compagnies">
+        <PropertyRef Name="CompagnyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DrugsPric__DrugI__3E52440B">
+    <End Role="Drugs" Type="ClinicSaintJeanModel.Store.Drugs" Multiplicity="1" />
+    <End Role="DrugsPriceHistoty" Type="ClinicSaintJeanModel.Store.DrugsPriceHistoty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="DrugsPriceHistoty">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__EmpAc__2E1BDC42">
+    <End Role="AccessLevels" Type="ClinicSaintJeanModel.Store.AccessLevels" Multiplicity="0..1" />
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessLevels">
+        <PropertyRef Name="AccessLevelID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="EmpAccessLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__Emplo__2C3393D0">
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="1" />
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__Emplo__2D27B809">
+    <End Role="EmployeeCategories" Type="ClinicSaintJeanModel.Store.EmployeeCategories" Multiplicity="0..1" />
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeCategories">
+        <PropertyRef Name="EmployeeCategoryID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="EmployeeCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpSalari__Emplo__30F848ED">
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="1" />
+    <End Role="EmpSalaries" Type="ClinicSaintJeanModel.Store.EmpSalaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmpSalaries">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__labTestsM__DrugI__4F7CD00D">
+    <End Role="Drugs" Type="ClinicSaintJeanModel.Store.Drugs" Multiplicity="1" />
+    <End Role="labTestsMaterials" Type="ClinicSaintJeanModel.Store.labTestsMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="labTestsMaterials">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__labTestsM__LabTe__4E88ABD4">
+    <End Role="LabTests" Type="ClinicSaintJeanModel.Store.LabTests" Multiplicity="1" />
+    <End Role="labTestsMaterials" Type="ClinicSaintJeanModel.Store.labTestsMaterials" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="LabTests">
+        <PropertyRef Name="LabTestID" />
+      </Principal>
+      <Dependent Role="labTestsMaterials">
+        <PropertyRef Name="LabTestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LogOnHist__Emplo__398D8EEE">
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="1" />
+    <End Role="LogOnHistory" Type="ClinicSaintJeanModel.Store.LogOnHistory" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="LogOnHistory">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PatientRe__Patie__5EBF139D">
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="1" />
+    <End Role="PatientReferers" Type="ClinicSaintJeanModel.Store.PatientReferers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="PatientReferers">
+        <PropertyRef Name="PatientRefererID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Patients__Patien__1DE57479">
+    <End Role="IndentifcationType" Type="ClinicSaintJeanModel.Store.IndentifcationType" Multiplicity="1" />
+    <End Role="Patients" Type="ClinicSaintJeanModel.Store.Patients" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IndentifcationType">
+        <PropertyRef Name="IDType" />
+      </Principal>
+      <Dependent Role="Patients">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PatientsT__LabTe__534D60F1">
+    <End Role="LabTests" Type="ClinicSaintJeanModel.Store.LabTests" Multiplicity="1" />
+    <End Role="PatientsTests" Type="ClinicSaintJeanModel.Store.PatientsTests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LabTests">
+        <PropertyRef Name="LabTestID" />
+      </Principal>
+      <Dependent Role="PatientsTests">
+        <PropertyRef Name="LabTestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PatientsT__Visit__52593CB8">
+    <End Role="Visits" Type="ClinicSaintJeanModel.Store.Visits" Multiplicity="1" />
+    <End Role="PatientsTests" Type="ClinicSaintJeanModel.Store.PatientsTests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visits">
+        <PropertyRef Name="VisitID" />
+      </Principal>
+      <Dependent Role="PatientsTests">
+        <PropertyRef Name="VisitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Paymen__239E4DCF">
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="1" />
+    <End Role="Payments" Type="ClinicSaintJeanModel.Store.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="PaymentSourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Paymen__24927208">
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="1" />
+    <End Role="Payments" Type="ClinicSaintJeanModel.Store.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="PaymentDestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Paymen__25869641">
+    <End Role="PaymentMode" Type="ClinicSaintJeanModel.Store.PaymentMode" Multiplicity="1" />
+    <End Role="Payments" Type="ClinicSaintJeanModel.Store.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMode">
+        <PropertyRef Name="PaymentModeID" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="PaymentModeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persons__IDType__1B0907CE">
+    <End Role="IndentifcationType" Type="ClinicSaintJeanModel.Store.IndentifcationType" Multiplicity="0..1" />
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IndentifcationType">
+        <PropertyRef Name="IDType" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="IDType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persons__PersonI__1A14E395">
+    <End Role="Entities" Type="ClinicSaintJeanModel.Store.Entities" Multiplicity="1" />
+    <End Role="Persons" Type="ClinicSaintJeanModel.Store.Persons" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Entities">
+        <PropertyRef Name="EntityID" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prescript__DrugI__45F365D3">
+    <End Role="Drugs" Type="ClinicSaintJeanModel.Store.Drugs" Multiplicity="1" />
+    <End Role="Prescriptions" Type="ClinicSaintJeanModel.Store.Prescriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="Prescriptions">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prescript__Visit__44FF419A">
+    <End Role="Visits" Type="ClinicSaintJeanModel.Store.Visits" Multiplicity="1" />
+    <End Role="Prescriptions" Type="ClinicSaintJeanModel.Store.Prescriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visits">
+        <PropertyRef Name="VisitID" />
+      </Principal>
+      <Dependent Role="Prescriptions">
+        <PropertyRef Name="VisitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rooster__Activit__36B12243">
+    <End Role="ActivityTypes" Type="ClinicSaintJeanModel.Store.ActivityTypes" Multiplicity="1" />
+    <End Role="Rooster" Type="ClinicSaintJeanModel.Store.Rooster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityTypes">
+        <PropertyRef Name="ActivityTypeID" />
+      </Principal>
+      <Dependent Role="Rooster">
+        <PropertyRef Name="ActivityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rooster__Employe__35BCFE0A">
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="1" />
+    <End Role="Rooster" Type="ClinicSaintJeanModel.Store.Rooster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Rooster">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__DrugI__5BE2A6F2">
+    <End Role="Drugs" Type="ClinicSaintJeanModel.Store.Drugs" Multiplicity="1" />
+    <End Role="ServiceTreatmentDrugs" Type="ClinicSaintJeanModel.Store.ServiceTreatmentDrugs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="ServiceTreatmentDrugs">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Emplo__66603565">
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="1" />
+    <End Role="ServiceTreatmentStaff" Type="ClinicSaintJeanModel.Store.ServiceTreatmentStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="ServiceTreatmentStaff">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Patie__628FA481">
+    <End Role="PatientReferers" Type="ClinicSaintJeanModel.Store.PatientReferers" Multiplicity="1" />
+    <End Role="ServiceTreatments" Type="ClinicSaintJeanModel.Store.ServiceTreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientReferers">
+        <PropertyRef Name="PatientRefererID" />
+      </Principal>
+      <Dependent Role="ServiceTreatments">
+        <PropertyRef Name="PatientRefererID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Servi__5812160E">
+    <End Role="ServiceTreatmentTypes" Type="ClinicSaintJeanModel.Store.ServiceTreatmentTypes" Multiplicity="1" />
+    <End Role="ServiceTreatmentFeeHist" Type="ClinicSaintJeanModel.Store.ServiceTreatmentFeeHist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceTreatmentTypes">
+        <PropertyRef Name="ServiceTreatmentTypeID" />
+      </Principal>
+      <Dependent Role="ServiceTreatmentFeeHist">
+        <PropertyRef Name="ServiceTreatmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Servi__5AEE82B9">
+    <End Role="ServiceTreatmentTypes" Type="ClinicSaintJeanModel.Store.ServiceTreatmentTypes" Multiplicity="1" />
+    <End Role="ServiceTreatmentDrugs" Type="ClinicSaintJeanModel.Store.ServiceTreatmentDrugs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceTreatmentTypes">
+        <PropertyRef Name="ServiceTreatmentTypeID" />
+      </Principal>
+      <Dependent Role="ServiceTreatmentDrugs">
+        <PropertyRef Name="ServiceTreatmentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Servi__619B8048">
+    <End Role="ServiceTreatmentTypes" Type="ClinicSaintJeanModel.Store.ServiceTreatmentTypes" Multiplicity="1" />
+    <End Role="ServiceTreatments" Type="ClinicSaintJeanModel.Store.ServiceTreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceTreatmentTypes">
+        <PropertyRef Name="ServiceTreatmentTypeID" />
+      </Principal>
+      <Dependent Role="ServiceTreatments">
+        <PropertyRef Name="ServiceTreatmentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Servi__656C112C">
+    <End Role="ServiceTreatments" Type="ClinicSaintJeanModel.Store.ServiceTreatments" Multiplicity="1" />
+    <End Role="ServiceTreatmentStaff" Type="ClinicSaintJeanModel.Store.ServiceTreatmentStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceTreatments">
+        <PropertyRef Name="ServiceTreatmentID" />
+      </Principal>
+      <Dependent Role="ServiceTreatmentStaff">
+        <PropertyRef Name="ServiceTreatmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Visit__6383C8BA">
+    <End Role="Visits" Type="ClinicSaintJeanModel.Store.Visits" Multiplicity="1" />
+    <End Role="ServiceTreatments" Type="ClinicSaintJeanModel.Store.ServiceTreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visits">
+        <PropertyRef Name="VisitID" />
+      </Principal>
+      <Dependent Role="ServiceTreatments">
+        <PropertyRef Name="VisitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stock__DrugID__48CFD27E">
+    <End Role="Drugs" Type="ClinicSaintJeanModel.Store.Drugs" Multiplicity="1" />
+    <End Role="Stock" Type="ClinicSaintJeanModel.Store.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="DrugID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="DrugID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stock__EmployeeI__49C3F6B7">
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="1" />
+    <End Role="Stock" Type="ClinicSaintJeanModel.Store.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__DoctorID__4222D4EF">
+    <End Role="Employees" Type="ClinicSaintJeanModel.Store.Employees" Multiplicity="1" />
+    <End Role="Visits" Type="ClinicSaintJeanModel.Store.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__PatientI__412EB0B6">
+    <End Role="Patients" Type="ClinicSaintJeanModel.Store.Patients" Multiplicity="1" />
+    <End Role="Visits" Type="ClinicSaintJeanModel.Store.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ClStJeanCreateTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

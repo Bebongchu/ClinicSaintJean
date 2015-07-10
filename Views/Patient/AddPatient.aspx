@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.EmployeeProfile>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.PatientProfile>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    EditStaff
+    AddPatient
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -20,10 +20,9 @@
         });
 
     </script>
-     <div style="width: 83px"> <a href="#a"><img alt="" src="../../Pictures/Profile/<%=ViewData["PicturePic"] %>" id="profilePic" class="profile-img" style="margin-left: 534px;" /></a> </div>
-     
-    <form action="#a" method="post">
-    <table class="NewStaff" >
+
+    <form action="#a" method="get">
+    <table class="NewStaff">
         <tr>
             <td class="NewStaffCol1">Name</td>
             <td class="NewStaffCol2"><%= Html.TextBoxFor(m => m.Name) %></td>
@@ -36,19 +35,7 @@
            
         </tr>
 
-         <tr>
-            <td class="modal-sm"><%= Html.LabelFor(m=>m.Username) %></td>
-            <td ><%= Html.TextBoxFor(m => m.Username) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.Username) %></td>
-           
-        </tr>
-
-        <tr>
-            <td  class="modal-sm"><%= Html.LabelFor(m=>m.Salary) %></td>
-            <td> <%= Html.TextBoxFor(m => m.Salary) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.Salary) %></td>
-           
-        </tr>
+        
 
          <tr>
             <td class="modal-sm">Cellphone Number</td>
@@ -75,79 +62,13 @@
             <td ><%= Html.TextBoxFor(m => m.EmailAddress) %></td>
 
         </tr>
-       
-
-       <tr>
-            <td class="modal-sm">Employee Title</td>
-            <td ><%= Html.DropDownListFor(m => m.EmpCategory,(SelectList)ViewData["EmpCategory"]) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.EmpCategory) %></td>
-           
-        </tr>
-
-          <tr>
-            <td class="modal-sm">Access Level</td>
-            <td ><%= Html.DropDownListFor(m => m.EmpAccessLevel,(SelectList)ViewData["AccessLevel"]) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.EmpAccessLevel) %></td>
-           
-        </tr>
-
-
-         <tr>
-            <td class="modal-sm">Bank Name</td>
-            <td ><%= Html.TextBoxFor(m => m.BankName) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.BankName) %></td>          
-        </tr>
-
-        <tr>
-            <td class="modal-sm">Account Number</td>
-            <td><%= Html.TextBoxFor(m => m.AccountNumber) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.AccountNumber) %></td>          
-        </tr>
-
-         <tr>
-            <td class="modal-sm">Branch Name</td>
-            <td><%= Html.TextBoxFor(m => m.BranchName) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.BranchName) %></td>          
-        </tr>
-
-         <tr>
-            <td  class="modal-sm">Branch Code</td>
-            <td> <%= Html.TextBoxFor(m => m.Branchcode) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.Branchcode) %></td>          
-        </tr>
-
+  
          <tr>
             <td class="modal-sm">Date of Birth</td>
                       
               <td>
 			  <div class="input-append date" id="dob" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 				<input class="span2" id="Text1" size="16" type="text" value="12-02-2012" readonly="">
-				<span class="add-on"><i class="icon-calendar"></i></span>
-			  </div>
-         
-               
-            </td>
-        </tr>
-
-        <tr>
-            <td class="modal-sm">Start Date</td>
-                      
-              <td>
-			  <div class="input-append date" id="startdate" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="Text2" size="16" type="text" value="12-02-2012" readonly="">
-				<span class="add-on"><i class="icon-calendar"></i></span>
-			  </div>
-         
-               
-            </td>
-        </tr>
-
-         <tr>
-            <td  class="modal-sm">Pay Day</td>
-                      
-              <td>
-			  <div class="input-append date" id="payday" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="Text3" size="16" type="text" value="12-02-2012" readonly="">
 				<span class="add-on"><i class="icon-calendar"></i></span>
 			  </div>
          
@@ -188,13 +109,11 @@
         <tr>
             
             <td class="modal-sm">Profile Picture</td>
-            <td><input type="file" id="File1" name="ProfilePic"></td>
+            <td><input type="file" id="ProfilePic" name="ProfilePic"></td>
         </tr>
-     
     </table>
-         <input id="Update"  type="submit" value="Update"  />
+        <input id="Create"  type="submit" value="Create"  />
 </form>
-
 
 
 </asp:Content>

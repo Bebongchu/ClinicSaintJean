@@ -4,9 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ClinicSaintJean_Ori.Models;
+using System.Web.Security;
 
 namespace ClinicSaintJean_Ori.Controllers
 {
+    [Authorize]
+    [SessionExpire]
     public class StaffController : Controller
     {
         //
@@ -30,8 +33,18 @@ namespace ClinicSaintJean_Ori.Controllers
             // Getting Employee Acess Levels
             ViewData["AccessLevel"] = test;
 
+            // Getting Countries
+            ViewData["Countries"] = test;
+
 
          
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddStaff(EmployeeProfile profile)
+        {
+
             return View();
         }
 
@@ -49,7 +62,7 @@ namespace ClinicSaintJean_Ori.Controllers
             // Search for the names and profile pics
 
 
-            if (false) // if search is succesfull
+            if (true) // if search is succesfull
             {
                 // Add names, profile pics and personids to the viewdata
                 List<string> profilepics = new List<string>();
@@ -90,7 +103,7 @@ namespace ClinicSaintJean_Ori.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditStaff(string PersonID)
+        public ActionResult EditStaff(string PersonID, string ProfilePic)
         {
             EmployeeProfile profile = new EmployeeProfile();
 
@@ -126,6 +139,13 @@ namespace ClinicSaintJean_Ori.Controllers
 
             // Getting Employee Acess Levels
             ViewData["AccessLevel"] = test;
+
+            // Profile Pic
+            ViewData["PicturePic"] = ProfilePic;
+
+            // Getting Countries
+            ViewData["Countries"] = test;
+
             return View(profile);
         }
     }

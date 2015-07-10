@@ -1,21 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.EmployeeSearch>" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<ClinicSaintJean_Ori.Models.EmployeeSearch>" %>
 
-<script runat="server">
-
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-</script>
-
-
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    SearchStaff
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <fieldset class="Paramfield">
+ <fieldset class="Paramfield">
      <legend> Choose the search method</legend>
     <form action="/Staff/SearchStaff" method="post">
        
@@ -78,4 +63,3 @@
 
     <label> <%= ViewData["Error"] %> </label>
     <%} %>
-</asp:Content>

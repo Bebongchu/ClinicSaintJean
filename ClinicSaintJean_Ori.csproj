@@ -221,10 +221,12 @@
       <DependentUpon>ClinicSaintJeanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PatientModels.cs" />
     <Compile Include="Models\StaffModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -342,9 +344,12 @@
     <Content Include="Styles\Tooltip\tooltip.css" />
     <Content Include="Views\Home\Main.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Patient\AddPatient.aspx" />
+    <Content Include="Views\Patient\SearchPatient.aspx" />
     <Content Include="Views\Staff\AddStaff.aspx" />
     <Content Include="Views\Staff\EditStaff.aspx" />
     <Content Include="Views\Staff\SearchStaff.aspx" />
+    <Content Include="Views\Shared\SearchStaff2.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

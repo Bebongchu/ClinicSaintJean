@@ -7,6 +7,9 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+
+using System.Web.Security;
+
 namespace ClinicSaintJean_Ori
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -23,5 +26,31 @@ namespace ClinicSaintJean_Ori
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+       
+
     }
+
+
+    public class SessionExpire : ActionFilterAttribute
+    {
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+
+
+            if (HttpContext.Current.Session["Username"] == null)
+            {
+                FormsAuthentication.SignOut();
+                filterContext.Result =
+               new RedirectToRouteResult(new RouteValueDictionary   
+            {  
+             { "action", "Index" },  
+            { "controller", "Home" },  
+            { "returnUrl", filterContext.HttpContext.Request.RawUrl}  
+             });
+
+                return;
+            }
+        }
+
+    }  
 }

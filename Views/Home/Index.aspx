@@ -50,7 +50,7 @@
 </head>
 <body >
   
-    <form action="Home/Main" method="get">
+    <form action="/Home/Main" method="get">
     <table class="master-table">
         <tr>
             <td class="menu-logo">

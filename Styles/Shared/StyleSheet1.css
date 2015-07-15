@@ -42,7 +42,7 @@
     width: 71px;
     height: 55px;
     top: 0;
-    margin-left: 4px;
+    margin-left: 0px;
     margin-top: 0px;
 }
 
@@ -70,26 +70,39 @@
     height: 55px;
 
 }
-.NewStaff {
-    width:65%; 
-    margin-left: 400px;
-    margin-right: 82px;
+.NewStaff { 
+
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     margin-bottom: 24px;
+    width: 700px;
 }
 
-    .NewStaff td {
+.NewStaffTable {
+   
+ 
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+    margin-left:auto;
+    margin-right:auto;
+}
+
+    .NewStaffTable td {
         height: 25px; 
        
     }
 
 .NewStaffCol1 {
-     width: 160px;
+     width: 190px;
 }
 
 .NewStaffCol2 {
-     width: 250px;
+     width: 225px;
 }
+
+
 .div-default 
 {
     margin-left: 123px;
@@ -112,12 +125,31 @@
 .Paramfield {
     
     width: 400px;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 26px;
+
+}
+
+.textdefault {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
 }
 
 .buttondefault {
-    align-self: center;
+  
     text-align: center;
-    margin-left: 170px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 27px;
+   
+    top: 30px;
+   
+    width: 148px;
+   
 }
+

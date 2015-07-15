@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link type="text/css" rel="stylesheet" href="../../Styles/DatePicker/bootstrap.css" />
+
     <link type="text/css" rel="stylesheet" href="../../Styles/DatePicker/bootstrap_datepicker.css" />
      <script type="text/javascript" src="../../Scripts/DatePicker/prettify.js"></script>
     
@@ -21,15 +21,18 @@
 
     </script>
 
+    <div class="NewStaff">
+        <div class="textdefault"> Add a New Patient </div>
     <form action="#a" method="get">
-    <table class="NewStaff">
+        <div >
+    <table class="NewStaffTable">
         <tr>
             <td class="NewStaffCol1">Name</td>
             <td class="NewStaffCol2"><%= Html.TextBoxFor(m => m.Name) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Name) %></td>
         </tr>
         <tr>
-            <td class="modal-sm">Surname</td>
+            <td >Surname</td>
             <td ><%= Html.TextBoxFor(m => m.Surname) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Surname) %></td>
            
@@ -38,33 +41,33 @@
         
 
          <tr>
-            <td class="modal-sm">Cellphone Number</td>
+            <td >Cellphone Number</td>
             <td ><%= Html.TextBoxFor(m => m.CellNumber) %></td>
             <td><%= Html.ValidationMessageFor(m => m.CellNumber) %></td>           
         </tr>
 
        <tr>
-            <td class="modal-sm">ID Type</td>
+            <td >ID Type</td>
             <td ><%= Html.DropDownListFor(m => m.IDType,(SelectList)ViewData["IDType"]) %></td>
              <td><%= Html.ValidationMessageFor(m => m.IDType) %></td>
            
         </tr>
 
         <tr>
-            <td class="modal-sm">ID Number</td>
+            <td >ID Number</td>
             <td ><%= Html.TextBoxFor(m => m.IDNumber) %></td>
              <td><%= Html.ValidationMessageFor(m => m.IDNumber) %></td>
            
         </tr>
 
         <tr>
-              <td class="modal-sm">Email Address</td>
+              <td >Email Address</td>
             <td ><%= Html.TextBoxFor(m => m.EmailAddress) %></td>
 
         </tr>
   
          <tr>
-            <td class="modal-sm">Date of Birth</td>
+            <td >Date of Birth</td>
                       
               <td>
 			  <div class="input-append date" id="dob" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
@@ -77,43 +80,46 @@
         </tr>
 
          <tr>
-            <td class="modal-sm">Street Address</td>
+            <td >Street Address</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Street) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Street) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Area</td>
+            <td >Area</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Area) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Area) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Town</td>
+            <td >Town</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Town) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Town) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Province</td>
+            <td >Province</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Province) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Street) %></td>          
         </tr>
 
           <tr>
-            <td  class="modal-sm">Country</td>
+            <td  >Country</td>
             <td ><%= Html.DropDownListFor(m => m.Address_Country,(SelectList)ViewData["Countries"]) %></td>
                     
         </tr>
 
         <tr>
             
-            <td class="modal-sm">Profile Picture</td>
+            <td >Profile Picture</td>
             <td><input type="file" id="ProfilePic" name="ProfilePic"></td>
         </tr>
     </table>
+            </div>
+        <div class="buttondefault">
         <input id="Create"  type="submit" value="Create"  />
+            </div>
 </form>
 
-
+</div>
 </asp:Content>

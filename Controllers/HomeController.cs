@@ -26,16 +26,19 @@ namespace ClinicSaintJean_Ori.Controllers
 
                 
                 List<string> menus = new List<string>();
-                menus.Add("Employee");
+                menus.Add("Employees");
                 menus.Add("Patients");
+                menus.Add("Stock");
 
                 List<List<string>> submenus = new List<List<string>>();
                 submenus.Add(new List<string>{"Create","Edit"});
                 submenus.Add(new List<string> { "Create", "Edit" });
+                submenus.Add(new List<string> { "Add Product", "Edit Product" });
 
                 List<List<string>> Links = new List<List<string>>();
                 Links.Add(new List<string> { "/Staff/AddStaff", "/Staff/SearchStaff" }); // Links per menus
                 Links.Add(new List<string> { "/Patient/AddPatient", "/Patient/SearchPatient" }); // Links per menus
+                Links.Add(new List<string> { "/Stock/AddProduct", "/Stock/SearchProduct" }); // Links per menus
 
                 Session["Menus"] = menus;
                 Session["SubMenus"] = submenus;

@@ -1026,6 +1026,7 @@ pre code {
 
 form {
   margin: 0 0 20px;
+    text-align: left;
 }
 
 fieldset {
@@ -1071,6 +1072,7 @@ textarea {
 label {
   display: block;
   margin-bottom: 5px;
+    margin-left: 0px;
 }
 
 select,
@@ -1182,7 +1184,7 @@ input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
-    margin-left: 577px;
+    margin-left: 0px;
 }
 
 select,

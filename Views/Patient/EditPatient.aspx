@@ -1,24 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.EmployeeProfile>" %>
-
-<script runat="server">
-
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-</script>
-
-
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClinicSaintJean_Ori.Models.PatientProfile>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    AddStaff
-  
+    EditPatient
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link type="text/css" rel="stylesheet" href="../../Styles/DatePicker/bootstrap.css" />
+ <link type="text/css" rel="stylesheet" href="../../Styles/DatePicker/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="../../Styles/DatePicker/bootstrap_datepicker.css" />
      <script type="text/javascript" src="../../Scripts/DatePicker/prettify.js"></script>
     
@@ -33,14 +21,18 @@
 
     </script>
 
-    <div class="NewStaff" >
-    <div class="textdefault" > Add a New Employee </div>
+    <div class="NewStaff">
+        <div class="textdefault"> Edit Patient Details </div>
+       
+     <div class="textdefault"> <a href="#a"><img alt="" src="../../Pictures/Profile/<%=ViewData["PicturePic"] %>" id="Img1" class="profile-img" style="margin-left: 0px;" /></a> </div>
+     
     <form action="#a" method="get">
-    <table class="NewStaffTable" >
+        <div >
+    <table class="NewStaffTable">
         <tr>
-            <td class="NewStaffCol1" >Name</td>
+            <td class="NewStaffCol1">Name</td>
             <td class="NewStaffCol2"><%= Html.TextBoxFor(m => m.Name) %></td>
-             <td> <%= Html.ValidationMessageFor(m => m.Name) %></td>
+             <td><%= Html.ValidationMessageFor(m => m.Name) %></td>
         </tr>
         <tr>
             <td >Surname</td>
@@ -49,19 +41,7 @@
            
         </tr>
 
-         <tr>
-            <td ><%= Html.LabelFor(m=>m.Username) %></td>
-            <td ><%= Html.TextBoxFor(m => m.Username) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.Username) %></td>
-           
-        </tr>
-
-        <tr>
-            <td  ><%= Html.LabelFor(m=>m.Salary) %></td>
-            <td> <%= Html.TextBoxFor(m => m.Salary) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.Salary) %></td>
-           
-        </tr>
+        
 
          <tr>
             <td >Cellphone Number</td>
@@ -88,79 +68,13 @@
             <td ><%= Html.TextBoxFor(m => m.EmailAddress) %></td>
 
         </tr>
-       
-
-       <tr>
-            <td >Employee Title</td>
-            <td ><%= Html.DropDownListFor(m => m.EmpCategory,(SelectList)ViewData["EmpCategory"]) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.EmpCategory) %></td>
-           
-        </tr>
-
-          <tr>
-            <td >Access Level</td>
-            <td ><%= Html.DropDownListFor(m => m.EmpAccessLevel,(SelectList)ViewData["AccessLevel"]) %></td>
-             <td><%= Html.ValidationMessageFor(m => m.EmpAccessLevel) %></td>
-           
-        </tr>
-
-
-         <tr>
-            <td >Bank Name</td>
-            <td ><%= Html.TextBoxFor(m => m.BankName) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.BankName) %></td>          
-        </tr>
-
-        <tr>
-            <td >Account Number</td>
-            <td><%= Html.TextBoxFor(m => m.AccountNumber) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.AccountNumber) %></td>          
-        </tr>
-
-         <tr>
-            <td >Branch Name</td>
-            <td><%= Html.TextBoxFor(m => m.BranchName) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.BranchName) %></td>          
-        </tr>
-
-         <tr>
-            <td  >Branch Code</td>
-            <td> <%= Html.TextBoxFor(m => m.Branchcode) %></td>
-            <td><%= Html.ValidationMessageFor(m => m.Branchcode) %></td>          
-        </tr>
-
+  
          <tr>
             <td >Date of Birth</td>
                       
               <td>
 			  <div class="input-append date" id="dob" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 				<input class="span2" id="Text1" size="16" type="text" value="12-02-2012" readonly="">
-				<span class="add-on"><i class="icon-calendar"></i></span>
-			  </div>
-         
-               
-            </td>
-        </tr>
-
-        <tr>
-            <td >Start Date</td>
-                      
-              <td>
-			  <div class="input-append date" id="startdate" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="StartDate" size="16" type="text" value="12-02-2012" readonly="">
-				<span class="add-on"><i class="icon-calendar"></i></span>
-			  </div>
-         
-               
-            </td>
-        </tr>
-
-         <tr>
-            <td  >Pay Day</td>
-                      
-              <td>
-			  <div class="input-append date" id="payday" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" id="PayDay" size="16" type="text" value="12-02-2012" readonly="">
 				<span class="add-on"><i class="icon-calendar"></i></span>
 			  </div>
          
@@ -204,6 +118,7 @@
             <td><input type="file" id="ProfilePic" name="ProfilePic"></td>
         </tr>
     </table>
+            </div>
         <div class="buttondefault">
         <input id="Create"  type="submit" value="Create"  />
             </div>

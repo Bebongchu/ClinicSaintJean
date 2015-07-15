@@ -16,7 +16,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <fieldset class="Paramfield">
-     <legend> Choose the search method</legend>
+     <legend class="textdefault"> Choose the search method</legend>
     <form action="/Staff/SearchStaff" method="post">
        
           <table class="radio">
@@ -37,17 +37,14 @@
            </tr>
 
           </table>
-                
-       
-      
+   
                <div class="div-default">
       
                       <%= Html.TextBox("SearchString") %>
-                 
+         
                 </div>
-      
-     
-             <input class="buttondefault" id="Create"  type="submit" value="Search"  />
+            <div class="buttondefault">  <input  id="Create"  type="submit" value="Search"  /> </div>
+            
       
      
     </form>
@@ -56,7 +53,7 @@
 
  <% if( ViewData["Profilepics"]!=null ){%>
     <fieldset class="Paramfield">
-     <legend> Results</legend>
+     <legend class="textdefault"> Results</legend>
           
           <%int count = 0; foreach (string picture in (List<string>)ViewData["Profilepics"])
             { %>

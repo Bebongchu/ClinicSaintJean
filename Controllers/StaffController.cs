@@ -56,7 +56,7 @@ namespace ClinicSaintJean_Ori.Controllers
         }
 
         [HttpPost]
-        public ActionResult SearchStaff(EmployeeSearch model)
+        public ActionResult SearchStaff(PersonSearch model)
         {
 
             // Search for the names and profile pics

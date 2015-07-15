@@ -20,72 +20,75 @@
         });
 
     </script>
-     <div style="width: 83px"> <a href="#a"><img alt="" src="../../Pictures/Profile/<%=ViewData["PicturePic"] %>" id="profilePic" class="profile-img" style="margin-left: 534px;" /></a> </div>
+    <div class="NewStaff">
+    <div class="textdefault"> Edit a Profile </div>
+     <div class="textdefault"> <a href="#a"><img alt="" src="../../Pictures/Profile/<%=ViewData["PicturePic"] %>" id="profilePic" class="profile-img" style="margin-left: 0px;" /></a> </div>
      
     <form action="#a" method="post">
-    <table class="NewStaff" >
+   
+    <table class="NewStaffTable" >
         <tr>
             <td class="NewStaffCol1">Name</td>
             <td class="NewStaffCol2"><%= Html.TextBoxFor(m => m.Name) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Name) %></td>
         </tr>
         <tr>
-            <td class="modal-sm">Surname</td>
+            <td >Surname</td>
             <td ><%= Html.TextBoxFor(m => m.Surname) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Surname) %></td>
            
         </tr>
 
          <tr>
-            <td class="modal-sm"><%= Html.LabelFor(m=>m.Username) %></td>
+            <td ><%= Html.LabelFor(m=>m.Username) %></td>
             <td ><%= Html.TextBoxFor(m => m.Username) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Username) %></td>
            
         </tr>
 
         <tr>
-            <td  class="modal-sm"><%= Html.LabelFor(m=>m.Salary) %></td>
+            <td  ><%= Html.LabelFor(m=>m.Salary) %></td>
             <td> <%= Html.TextBoxFor(m => m.Salary) %></td>
              <td><%= Html.ValidationMessageFor(m => m.Salary) %></td>
            
         </tr>
 
          <tr>
-            <td class="modal-sm">Cellphone Number</td>
+            <td >Cellphone Number</td>
             <td ><%= Html.TextBoxFor(m => m.CellNumber) %></td>
             <td><%= Html.ValidationMessageFor(m => m.CellNumber) %></td>           
         </tr>
 
        <tr>
-            <td class="modal-sm">ID Type</td>
+            <td >ID Type</td>
             <td ><%= Html.DropDownListFor(m => m.IDType,(SelectList)ViewData["IDType"]) %></td>
              <td><%= Html.ValidationMessageFor(m => m.IDType) %></td>
            
         </tr>
 
         <tr>
-            <td class="modal-sm">ID Number</td>
+            <td >ID Number</td>
             <td ><%= Html.TextBoxFor(m => m.IDNumber) %></td>
              <td><%= Html.ValidationMessageFor(m => m.IDNumber) %></td>
            
         </tr>
 
         <tr>
-              <td class="modal-sm">Email Address</td>
+              <td >Email Address</td>
             <td ><%= Html.TextBoxFor(m => m.EmailAddress) %></td>
 
         </tr>
        
 
        <tr>
-            <td class="modal-sm">Employee Title</td>
+            <td >Employee Title</td>
             <td ><%= Html.DropDownListFor(m => m.EmpCategory,(SelectList)ViewData["EmpCategory"]) %></td>
              <td><%= Html.ValidationMessageFor(m => m.EmpCategory) %></td>
            
         </tr>
 
           <tr>
-            <td class="modal-sm">Access Level</td>
+            <td >Access Level</td>
             <td ><%= Html.DropDownListFor(m => m.EmpAccessLevel,(SelectList)ViewData["AccessLevel"]) %></td>
              <td><%= Html.ValidationMessageFor(m => m.EmpAccessLevel) %></td>
            
@@ -93,31 +96,31 @@
 
 
          <tr>
-            <td class="modal-sm">Bank Name</td>
+            <td >Bank Name</td>
             <td ><%= Html.TextBoxFor(m => m.BankName) %></td>
             <td><%= Html.ValidationMessageFor(m => m.BankName) %></td>          
         </tr>
 
         <tr>
-            <td class="modal-sm">Account Number</td>
+            <td >Account Number</td>
             <td><%= Html.TextBoxFor(m => m.AccountNumber) %></td>
             <td><%= Html.ValidationMessageFor(m => m.AccountNumber) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Branch Name</td>
+            <td >Branch Name</td>
             <td><%= Html.TextBoxFor(m => m.BranchName) %></td>
             <td><%= Html.ValidationMessageFor(m => m.BranchName) %></td>          
         </tr>
 
          <tr>
-            <td  class="modal-sm">Branch Code</td>
+            <td  >Branch Code</td>
             <td> <%= Html.TextBoxFor(m => m.Branchcode) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Branchcode) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Date of Birth</td>
+            <td >Date of Birth</td>
                       
               <td>
 			  <div class="input-append date" id="dob" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
@@ -130,7 +133,7 @@
         </tr>
 
         <tr>
-            <td class="modal-sm">Start Date</td>
+            <td >Start Date</td>
                       
               <td>
 			  <div class="input-append date" id="startdate" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
@@ -143,7 +146,7 @@
         </tr>
 
          <tr>
-            <td  class="modal-sm">Pay Day</td>
+            <td  >Pay Day</td>
                       
               <td>
 			  <div class="input-append date" id="payday" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
@@ -156,45 +159,48 @@
         </tr>
 
          <tr>
-            <td class="modal-sm">Street Address</td>
+            <td >Street Address</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Street) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Street) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Area</td>
+            <td >Area</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Area) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Area) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Town</td>
+            <td >Town</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Town) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Town) %></td>          
         </tr>
 
          <tr>
-            <td class="modal-sm">Province</td>
+            <td >Province</td>
             <td ><%= Html.TextBoxFor(m => m.Address_Province) %></td>
             <td><%= Html.ValidationMessageFor(m => m.Address_Street) %></td>          
         </tr>
 
           <tr>
-            <td  class="modal-sm">Country</td>
+            <td >Country</td>
             <td ><%= Html.DropDownListFor(m => m.Address_Country,(SelectList)ViewData["Countries"]) %></td>
                     
         </tr>
 
         <tr>
             
-            <td class="modal-sm">Profile Picture</td>
+            <td >Profile Picture</td>
             <td><input type="file" id="File1" name="ProfilePic"></td>
         </tr>
      
     </table>
+       
+        <div class="buttondefault">
          <input id="Update"  type="submit" value="Update"  />
+         </div>
 </form>
-
+</div>
 
 
 </asp:Content>
